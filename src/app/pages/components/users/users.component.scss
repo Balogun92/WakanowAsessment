@@ -1,0 +1,55 @@
+.table-container{
+  margin: 4rem;
+
+}
+
+table {
+  width: 100%;
+  border-radius: 5px;
+  color: #030D1C;
+  background-color: none !important;
+}
+
+
+
+mat-form-field {
+  width: 100%;
+  outline: none;
+}
+
+
+.mat-header-cell{
+  background-color:#F5F5F6 !important;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 50%;
+}
+
+.table-row {
+  cursor: pointer;
+}
+
+.table-row:hover {
+  background-color: rgba(237, 237, 237, 1) !important;
+}
+
+.table-row:active {
+  background-color: rgba(237, 237, 237, 1) !important;
+}
+
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+  width: 22%;
+}
+
+.action-btn{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.mat-elevation-z8 {
+  box-shadow: none !important;
+}
+

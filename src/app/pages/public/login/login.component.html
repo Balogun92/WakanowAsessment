@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="img-container"> </div>
+  <div class="login-form-container">
+    <div class="logo">
+        <img src="../../../../assets/site-logo.png" alt="logo">
+    </div>
+    <div class="login-form">
+      <div *ngIf="showSignupForm">
+        <h4>Sign Up</h4>
+        <p class="upper-form-text">It's Quick & Simple</p>
+          <form [formGroup]="signUpForm" >
+            <div class="form-group">
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="First Name" formControlName="firstName">
+                    <mat-error style="font-size: x-small;">Name is required</mat-error>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field appearance="outline">
+                    <input matInput placeholder="Last Name" formControlName="lastName">
+                    <mat-error style="font-size: x-small;">Name is required</mat-error>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field appearance="outline">
+                    <input matInput placeholder="Email" formControlName="email">
+                    <mat-error style="font-size: x-small;">Valid email is required</mat-error>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field appearance="outline" >
+                    <input matInput [type]="hide() ? 'password' : 'text'"  placeholder="Password" formControlName="password"/>
+                    <mat-error style="font-size: x-small;">Password is required</mat-error>
+                    <span class="spanIcon"
+                      mat-icon-button
+                      matSuffix
+                      (click)="clickEvent($event)"
+                      [attr.aria-label]="'Hide password'"
+                      [attr.aria-pressed]="hide()"
+                    >
+                      <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </span>
+                    </mat-form-field>
+            </div>
+            <div class="submit-btn-container">
+                <button mat-button type="submit" class="login-submit-btn" [disabled]="!signUpForm.valid" (click)="signUp()">SIGN UP</button>
+            </div>
+            <p class="bottom-form-text">Already have an account? <a class="login-text" (click)="onClickLogin()">Login</a> </p>
+
+        </form>
+      </div>
+
+        <div *ngIf="showLoginForm">
+          <h4>Login</h4>
+          <form [formGroup]="loginForm" >
+            <div class="form-group">
+                  <mat-form-field appearance="outline">
+                    <input matInput placeholder="Email" formControlName="email">
+                    <mat-error style="font-size: x-small;">Valid email is required</mat-error>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field appearance="outline" >
+                    <input matInput [type]="hide() ? 'password' : 'text'"  placeholder="Password" formControlName="password"/>
+                    <mat-error style="font-size: x-small;">Password is required</mat-error>
+                    <span class="spanIcon"
+                      mat-icon-button
+                      matSuffix
+                      (click)="clickEvent($event)"
+                      [attr.aria-label]="'Hide password'"
+                      [attr.aria-pressed]="hide()"
+                    >
+                      <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </span>
+                    </mat-form-field>
+            </div>
+            <div class="submit-btn-container">
+                <button mat-button type="submit" class="login-submit-btn" (click)="login()" [disabled]="!loginForm.valid">LOGIN</button>
+            </div>
+
+        </form>
+        </div>
+
+
+
+        <!-- <p class="bottom-form-text">&copy; 2024 All rights reserved Wakanow</p> -->
+    </div>
+</div>
+    </div>

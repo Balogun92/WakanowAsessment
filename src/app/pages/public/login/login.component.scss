@@ -1,0 +1,133 @@
+.container{
+  // border: 1px solid red ;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  .img-container{
+      width: 100%;
+      background-image: linear-gradient(rgba(0,51,170,0.7), rgba(0,51,170,0.1)), url(../../../../../public/assets/airplane.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: white;
+      @media only screen and (max-width: 861px) {
+
+          display: none;
+
+      }
+
+  }
+
+  .login-form-container{
+
+    background-color: white;
+        // display: flex;
+        justify-content: center;
+        margin:  0rem 5rem;
+        @media only screen and (max-width: 861px) {
+            width: 100%;
+        }
+      .logo{
+          text-align: right;
+          margin: 4rem 4rem;
+      }
+
+      .login-form{
+        width: 60%;
+          height: fit-content;
+
+
+          @media only screen and (max-width: 1350px) {
+
+              margin: 5rem 5rem;
+
+          }
+
+          @media only screen and (max-width: 425px) {
+
+              margin: 3rem 2rem;
+
+          }
+
+
+
+          h4{
+              font-size: 18px;
+
+          }
+          .upper-form-text{
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 20px;
+              color: rgba(0,0,0,0.5);
+              margin: 20px 0px;
+          }
+
+          .form-group{
+
+              mat-form-field{
+                  width: 100%;
+                  outline: none !important;
+              }
+          }
+
+          .submit-btn-container{
+              margin: 30px 0px 20px 0px;
+
+              .login-submit-btn{
+                  padding: 22px 45px !important;
+                  width: 100%;
+                  border: none;
+                  color: #fff;
+                  background-color: #0033aa;
+                  border-radius: 3px;
+                  cursor: pointer;
+                  height: 50px;
+              }
+
+              .login-submit-btn:disabled{
+                // padding: 22px 45px !important;
+                // width: 100%;
+                // border: none;
+                // color: #fff;
+                background-color: grey;
+                // border-radius: 3px;
+                // cursor: pointer;
+                // height: 50px;
+
+
+
+            }
+
+          }
+
+
+          .lower-form-text{
+              font-weight: 600;
+              font-size: 16px;
+              color: rgba(0,0,0,0.5);
+              margin-bottom: 20px;
+
+          }
+
+          .bottom-form-text{
+              font-size: 14px;
+              font-weight: 500;
+              color: rgba(0,0,0,0.5);
+              display: flex;
+          }
+
+      }
+
+  }
+
+}
+.spanIcon {
+  padding: 0 5px;
+}
+
+.login-text{
+  text-decoration: underline;
+  cursor: pointer;
+  color: blue;
+}
